@@ -1,18 +1,21 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <jm-editor></jm-editor>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-
+import editor from './editor'
 export default {
   name: 'Dashboard',
   computed: {
     ...mapGetters([
       'name'
     ])
+  },
+  components: {
+    'jm-editor': editor
   }
 }
 </script>
